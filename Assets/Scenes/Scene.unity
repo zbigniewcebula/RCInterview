@@ -1375,7 +1375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 311825584}
   scroll: {fileID: 550319159}
-  entryPrefab: {fileID: 0}
+  entryPrefab: {fileID: 8522442112616239447, guid: e8995203041ef084a9fe7030f4d8db9c, type: 3}
   initialEntries: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
