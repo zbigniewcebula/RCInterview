@@ -47,6 +47,21 @@ public class VirtualizedList : MonoBehaviour
 		scroll.onValueChanged.RemoveListener(Refresh);
 	}
 
+	private void Update()
+	{
+		if(Input.mouseScrollDelta.y != 0)
+		{
+			int steps = scroll.numberOfSteps - 2;
+			if(steps < 1)
+				steps = 1;
+			float diff = Input.mouseScrollDelta.y / -steps;
+			float val = Mathf.Clamp(
+				scroll.value + diff, 0, 1
+			);
+			scroll.value = val;
+		}
+	}
+
 	private void Refresh(float value)
 	{
 		int steps = entries.Count - maxEntries;
